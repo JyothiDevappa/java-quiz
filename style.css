@@ -11,10 +11,9 @@ body {
 
 .container {
   text-align: center;
-  background: #121212; 
+  background-color: #000000; 
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 0 15px rgba(189, 113, 172, 0.7); 
   width: 90%;
   max-width: 400px;
 }
