@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Java Quiz App</h1>
+    <p>Select Difficulty:</p>
+
+    <div class="levels">
+      <button class="level-btn" onclick="selectLevel('easy')">Easy</button>
+      <button class="level-btn" onclick="selectLevel('medium')">Medium</button>
+      <button class="level-btn" onclick="selectLevel('hard')">Hard</button>
+    </div>
+
+    <button id="start-btn" onclick="startQuiz()" disabled>Start Quiz</button>
+  </div>
+
+  <script>
+    let selectedLevel = null;
+
+    function selectLevel(level) {
+      selectedLevel = level;
+      document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('selected'));
+      event.target.classList.add('selected');
+      document.getElementById('start-btn').disabled = false;
+    }
+
+    function startQuiz() {
+      window.location.href = `${selectedLevel}.html`;
+    }
+  </script>
+</body>
+</html>
